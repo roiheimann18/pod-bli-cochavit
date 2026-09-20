@@ -30,6 +30,11 @@
     <style>
         body {
             background-color: #0f172a; /* slate-900 */
+            /* Add theme colors to background: yellow on right, red on left */
+            background-image: 
+                radial-gradient(circle at 100% 30%, rgba(250, 204, 21, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 0% 30%, rgba(239, 68, 68, 0.25) 0%, transparent 50%);
+            background-attachment: fixed;
             color: #f8fafc; /* slate-50 */
         }
         .hero-image-container {
@@ -69,9 +74,7 @@
         
         <!-- Hero Section -->
         <section class="relative px-4 md:px-8 py-10 md:py-20 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
-            <!-- Theme Glows -->
-            <div class="fixed top-0 right-0 w-1/2 h-screen bg-yellow-500/20 blur-[120px] pointer-events-none z-0"></div>
-            <div class="fixed top-0 left-0 w-1/2 h-screen bg-red-600/20 blur-[120px] pointer-events-none z-0"></div>
+            <!-- Theme Glows removed in favor of CSS body background -->
 
             <!-- Text Content -->
             <div class="flex-1 text-center md:text-right space-y-6 z-10">
